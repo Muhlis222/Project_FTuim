@@ -27,7 +27,7 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="{%url 'home-page'%}">Home</a>
-                                {% for category in categories %}
+                                    {% for category in categories %}
                                 <li><a href="{% url 'category-post' category.id %}">{{category}}</a></li>
                                 {% endfor %}
                                 {% if not user.id %}
