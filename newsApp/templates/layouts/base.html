@@ -13,20 +13,20 @@
     <title>{{page_title}} - {{site_name}}</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{% static 'img/core-img/favicon.ico'  %}">
+    <link rel="icon" href="{% static 'img/core-img/logouim.ico'  %}">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}"> {% block header %} {% endblock header %}
-    
+
     <!-- jQuery-2.2.4 js -->
     <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
     <style>
-        #post-list:empty:after{
-            content:"No post listed yet.";
-            color:var(--gray);
-            text-align:center;
-            font-style:italic;
-            width:100%
+        #post-list:empty:after {
+            content: "No post listed yet.";
+            color: var(--gray);
+            text-align: center;
+            font-style: italic;
+            width: 100%
         }
     </style>
 </head>
@@ -54,7 +54,8 @@
                     <div class="d-flex w-100">
                         <div class="col-auto flex-shrink-1 flex-grow-1">{{ message|safe }}</div>
                         <div class="col-auto text-center">
-                            <a class="text-dark text-sm" type="javascript:void(0)" onclick="$(this).closest('.alert').remove()"><i class="fa fa-times"></i></a>
+                            <a class="text-dark text-sm" type="javascript:void(0)"
+                                onclick="$(this).closest('.alert').remove()"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
 
@@ -63,10 +64,10 @@
             </div>
         </div>
         <script>
-            $(function(){
-                setTimeout(function(){
+            $(function () {
+                setTimeout(function () {
                     $('html, body').scrollTop(0)
-                },300)
+                }, 300)
             })
         </script>
     </div>
@@ -86,8 +87,8 @@
     <script src="{% static 'js/active.js' %}"></script>
     {% block javascripts %} {% endblock javascripts %}
     <script>
-        $(function(){
-            if($('#post-list>div').length <= 0){
+        $(function () {
+            if ($('#post-list>div').length <= 0) {
                 $('#post-list').html('')
             }
         })
