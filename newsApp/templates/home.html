@@ -14,7 +14,8 @@
                         <h6>All the news</h6>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav1" data-toggle="tab" href="#nav-1" role="tab" aria-controls="nav-1" aria-selected="true">Latest</a>
+                                <a class="nav-item nav-link active" id="nav1" data-toggle="tab" href="#nav-1" role="tab"
+                                    aria-controls="nav-1" aria-selected="true">Latest</a>
                             </div>
                         </nav>
                     </div>
@@ -28,14 +29,17 @@
                                     <div class="single-blog-post style-2 mb-5">
                                         <!-- Blog Thumbnail -->
                                         <div class="blog-thumbnail">
-                                            <a href="{% url 'view-post' lpost.id %}"><img src="{{lpost.banner_path.url}}" alt="{{lpost.title}}"></a>
+                                            <a href="{% url 'view-post' lpost.id %}"><img
+                                                    src="{{lpost.banner_path.url}}" alt="{{lpost.title}}"></a>
                                         </div>
 
                                         <!-- Blog Content -->
                                         <div class="blog-content">
                                             <span class="post-date">{{lpost.date_created|date:"M d, Y"}}</span>
-                                            <a href="{% url 'view-post' lpost.id %}" class="post-title">{{lpost.title}}</a>
-                                            <a href="mailto:{{lpost.user.email}}" target="_blank" class="post-author">By {{lpost.user.username}}</a>
+                                            <a href="{% url 'view-post' lpost.id %}"
+                                                class="post-title">{{lpost.title}}</a>
+                                            <a href="mailto:{{lpost.user.email}}" target="_blank" class="post-author">By
+                                                {{lpost.user.username}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -46,13 +50,15 @@
                                     <div class="single-blog-post d-flex style-4 mb-30">
                                         <!-- Blog Thumbnail -->
                                         <div class="blog-thumbnail">
-                                            <a href="{% url 'view-post' lpost.id %}"><img src="{{lpost.banner_path.url}}" alt="{{lpost.title}}"></a>
+                                            <a href="{% url 'view-post' lpost.id %}"><img
+                                                    src="{{lpost.banner_path.url}}" alt="{{lpost.title}}"></a>
                                         </div>
 
                                         <!-- Blog Content -->
                                         <div class="blog-content">
                                             <span class="post-date">{{lpost.date_created|date:"M d, Y"}}</span>
-                                            <a href="{% url 'view-post' lpost.id %}" class="post-title">{{lpost.title}}</a>
+                                            <a href="{% url 'view-post' lpost.id %}"
+                                                class="post-title">{{lpost.title}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,8 +74,8 @@
             <div class="col-12 col-sm-9 col-md-6 col-lg-4">
                 <div class="sidebar-area">
 
-                   <!-- Add Widget -->
-                   <div class="single-widget-area add-widget mb-30">
+                    <!-- Add Widget -->
+                    <div class="single-widget-area add-widget mb-30">
                         <a href="#">
                             <img src="{% static 'img/bg-img/add3.png' %}" alt="">
                         </a>
