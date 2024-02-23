@@ -498,7 +498,7 @@ img {
 
 .header-area .newsbox-main-menu .classy-navbar .classynav ul li a:hover,
 .header-area .newsbox-main-menu .classy-navbar .classynav ul li a:focus {
-  color: #ef1b48;
+  color: #0a77f3;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -711,7 +711,7 @@ img {
   position: relative;
   z-index: 10;
   text-align: center;
-  width: 100%;
+  width: 50%;
 }
 
 .footer-area .footer-logo a {
@@ -722,7 +722,7 @@ img {
 
 .footer-area .footer-logo::after {
   position: absolute;
-  width: 100%;
+  width: 50%;
   content: '';
   background-color: #d6dfe2;
   height: 2px;

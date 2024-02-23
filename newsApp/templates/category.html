@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %}{% load static %} {% block content %}
-<div class="news-area section-padding-100-70">
+<div class="news-area ">
     <div class="container">
-        <h3 class="text-center"><b>{{category.name}} Posts</b></h3>
+        <h3 class="text-center"><b>{{category.name}}</b></h3>
         <center>
             <hr class="w-25">
         </center>
@@ -13,7 +13,8 @@
                     <div class="single-blog-post d-flex flex-wrap style-5 mb-30">
                         <!-- Blog Thumbnail -->
                         <div class="blog-thumbnail">
-                            <a href="{% url 'view-post' post.pk %}"><img src="{{post.banner_path.url}}" alt="{post.title}"></a>
+                            <a href="{% url 'view-post' post.pk %}"><img src="{{post.banner_path.url}}"
+                                    alt="{post.title}"></a>
                         </div>
 
                         <!-- Blog Content -->
@@ -41,21 +42,22 @@
                     <!-- Latest News Widget -->
                     <div class="single-widget-area news-widget mb-30">
                         <h4>Latest News</h4>
-                            {% for lpost in latest %}
-                            <!-- Single News Area -->
-                            <div class="single-blog-post d-flex style-4 mb-30">
-                                <!-- Blog Thumbnail -->
-                                <div class="blog-thumbnail">
-                                    <a href="{% url 'view-post' lpost.pk %}"><img src="{{lpost.banner_path.url}}" alt="{{lpost.title}}"></a>
-                                </div>
-
-                                <!-- Blog Content -->
-                                <div class="blog-content">
-                                    <span class="post-date">{{lpost.date_created|date:"M d, Y"}}</span>
-                                    <a href="{% url 'view-post' lpost.pk %}" class="post-title">{{lpost.title}}</a>
-                                </div>
+                        {% for lpost in latest %}
+                        <!-- Single News Area -->
+                        <div class="single-blog-post d-flex style-4 mb-30">
+                            <!-- Blog Thumbnail -->
+                            <div class="blog-thumbnail">
+                                <a href="{% url 'view-post' lpost.pk %}"><img src="{{lpost.banner_path.url}}"
+                                        alt="{{lpost.title}}"></a>
                             </div>
-                            {% endfor %}
+
+                            <!-- Blog Content -->
+                            <div class="blog-content">
+                                <span class="post-date">{{lpost.date_created|date:"M d, Y"}}</span>
+                                <a href="{% url 'view-post' lpost.pk %}" class="post-title">{{lpost.title}}</a>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
 
                 </div>
